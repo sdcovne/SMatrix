@@ -129,7 +129,7 @@ class Appl(QWidget):
 
             grid3.addWidget(QLabel('rango(M) = {}'.format(rank)), 3,1)
 
-            
+          
             self.d.setWindowTitle('Aggiunta di M, M*')
 
 
