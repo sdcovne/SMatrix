@@ -1,12 +1,10 @@
-## Welcome to GitHub Pages
+## What is it?
 
-You can use the [editor on GitHub](https://github.com/sebastianodavide/SMatrix/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+SMatrix is a lightweight and open source tool to perform basic operations on squares matrices. I developed it 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## What does it do?
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+SMatrix allows you to compute rapidly determinants and adjugates of square matrices.
 
 ```markdown
 Syntax highlighted code block
