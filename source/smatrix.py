@@ -157,4 +157,5 @@ if __name__ == '__main__':
     
     ex = Appl()
 
+    
     sys.exit(app.exec_())
