@@ -18,5 +18,4 @@ SMatrix is developed completely in Python3. It uses [pyQt5](https://pypi.org/pro
 
 When you have to deal with inverses matrices, usually you have to deal with fractions. Without using a specific library as Simpy, fractions are rendered as decimals and often you end up with decimals with more than 10 figures. Even if you're working on small matrix, let's say 4x4, is overwhelming seeing 16 10-figures decimals numbers. Furthermore Numpy's approximation aren't 100% accurate on big decimals numbers.
 
-For those reasons I preffered to work with adjugates matrices. You should also considering that once the determinant and the adjugate of a matrix are known is just a matter of basic arithmetics compute the inverse of that matrix: 
-![img](http://www.sciweavers.org/tex2img.php?eq=A%5E%7B-1%7D%20%3D%20%5Cfrac%7B1%7D%7Bdet%28A%29%7D%20%5Ccdot%20A%5E%7B%2A%7D&bc=White&fc=Black&im=jpg&fs=18&ff=modern&edit=0)
+For those reasons I preffered to work with adjugates matrices. You should also considering that once the determinant and the adjugate of a matrix are known is just a matter of basic arithmetics compute the inverse of that matrix.
