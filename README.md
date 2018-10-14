@@ -16,4 +16,6 @@ SMatrix is developed completely in Python3. It uses [pyQt5](https://pypi.org/pro
 
 ### Why it does calculate adjugate matrix and not inverse matrix?
 
-![img](http://www.sciweavers.org/tex2img.php?eq=A%5E%7B-1%7D%20%3D%20%5Cfrac%7B1%7D%7B%7CA%7C%7D%20%5Ccdot%20A&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0)
+As you may already know the inverse matrix is given 
+
+![img](http://www.sciweavers.org/tex2img.php?eq=A%5E%7B-1%7D%20%3D%20%5Cfrac%7B1%7D%7Bdet%28A%29%7D%20%5Ccdot%20A%5E%7B%2A%7D&bc=White&fc=Black&im=jpg&fs=18&ff=modern&edit=0)
