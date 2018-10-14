@@ -13,3 +13,7 @@ SMatrix is recommended for undergraduate students who have to take a linear alge
 ## How is it developed?
 
 SMatrix is developed completely in Python3. It uses [pyQt5](https://pypi.org/project/PyQt5/) for the user interface and [numpy](http://www.numpy.org/) for the calculations.
+
+### Why it does calculate adjugate matrix and not inverse matrix?
+
+![\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}](https://latex.codecogs.com/svg.latex?x%3D%5Cfrac%7B-b%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D)
