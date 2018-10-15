@@ -16,7 +16,7 @@ SMatrix is developed completely in Python3. It uses [pyQt5](https://pypi.org/pro
 
 ## For which platform is it available?
 
-While I'm writing SMatrix is available on macOS, Windows and Linux. I expect the release of an improved version for Android and iOS.
+While I'm writing SMatrix is available on macOS and Linux. I expect the release of an improved version for Android and iOS.
 
 #### Why it does calculate adjugate matrix and not inverse matrix?
 
