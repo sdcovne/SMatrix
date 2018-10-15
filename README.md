@@ -51,4 +51,5 @@ as root, run
 ```bash
 chmod +x install.sh && ./install.sh
 ```
+install.sh will insert SMatrix in your Applications menu (Cateogory = Office).
 
