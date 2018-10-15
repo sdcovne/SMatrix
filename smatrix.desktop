@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=SMatrix
+Exec=/usr/local/bin/SMatrix
+Icon=/usr/local/bin/icon.png
+Type=Application
+Categories=Office
