@@ -9,3 +9,5 @@ pip3 install --upgrade setuptools
 pyinstaller --onefile --windowed --icon=icon.icns --name SMatrix source/smatrix.py
 
 cd dist/ && mv SMatrix.app /Volumes/Macintosh\ HD/Applications
+
+cd .. && rm -r SMatrix/
