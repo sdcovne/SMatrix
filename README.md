@@ -40,3 +40,5 @@ From the cloned (or unziped) directory run:
 ```bash
 chmod +x install.command && ./install.command
 ```
+
+(install.command will automatically place SMatrix on your Applications folder)
