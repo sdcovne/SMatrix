@@ -14,7 +14,9 @@ SMatrix is recommended for undergraduate students who have to take a linear alge
 
 SMatrix is developed completely in Python3. It uses [pyQt5](https://pypi.org/project/PyQt5/) for the user interface and [numpy](http://www.numpy.org/) for the calculations.
 
+## For which platform is it available?
 
+While I'm writing SMatrix is available on macOS, Windows and Linux. I expect the release of an improved version for Android and iOS.
 
 #### Why it does calculate adjugate matrix and not inverse matrix?
 
