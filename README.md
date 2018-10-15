@@ -26,7 +26,7 @@ For those reasons I preffered to work with adjugates matrices. You should also c
 
 # How to install it?
 
-## On macOS
+## On Linux and macOS
 
 If you have git installed run from your terminal
 
@@ -37,8 +37,16 @@ Othervise you can just download the .zip file from this site and unzip it.
 
 From the cloned (or unziped) directory run:
 
+### On macOS
+
 ```bash
 chmod +x install.command && ./install.command
 ```
-
 (install.command will automatically place SMatrix on your Applications folder)
+
+### On Linux
+
+```bash
+chmod +x install.sh && ./install.sh
+```
+
