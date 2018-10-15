@@ -46,6 +46,8 @@ chmod +x install.command && ./install.command
 
 ### On Linux
 
+as root, run
+
 ```bash
 chmod +x install.sh && ./install.sh
 ```
