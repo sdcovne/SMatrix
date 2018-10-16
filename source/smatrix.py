@@ -10,6 +10,7 @@ class Appl(QWidget):
         super().__init__()
         self.startUI()
         self.linesArray = []
+    
     def startUI(self):
 
         self.grid = QGridLayout()
@@ -35,7 +36,7 @@ class Appl(QWidget):
         self.setLayout(self.grid)
   
         self.setGeometry(300,300,100,200)
-        self.setWindowTitle("Ordine(M)")
+        self.setWindowTitle("Order of M)")
         
         self.show()
 
@@ -46,7 +47,7 @@ class Appl(QWidget):
         self.linesArray = []
 
         if self.qle.text() == '':
-            self.grid.addWidget(QLabel('Inserisci un valore'), 3,0)
+            self.grid.addWidget(QLabel('Matrix Order'), 3,0)
         else:
 
             self.n = int(self.qle.text())
@@ -62,13 +63,13 @@ class Appl(QWidget):
                     self.grid2.addWidget(l, i, j)
                     self.linesArray.append(l)
             
-            sucButton = QPushButton('Continua')
-            delButton = QPushButton('Cancella')
-            fillButton = QPushButton('Riempi')
-            uniButton = QPushButton('Unitaria')
+            sucButton = QPushButton('Continue')
+            delButton = QPushButton('Cancel')
+            fillButton = QPushButton('Fill')
+            uniButton = QPushButton('Unitary')
 
-            fillButton.setToolTip('Riempi le caselle vuote con 0')
-            uniButton.setToolTip('Matrice Unitaria di ordine {}'.format(self.n))
+            fillButton.setToolTip('Fill the empty forms with 0s')
+            uniButton.setToolTip('Unitary Matrix of order {}'.format(self.n))
 
             sucButton.clicked.connect(lambda: self.matrixCalc())
             delButton.clicked.connect(lambda: self.delTab())
@@ -84,41 +85,46 @@ class Appl(QWidget):
             self.d.setGeometry(200,200,self.n*100,self.n*100)
             self.d.show()
 
-    def delTab(self):
+    def delTab(self):  #method triggered by the 'Cancel' Button
 
-        self.d.setWindowTitle('Matrice M')
+        self.d.setWindowTitle('Matrix M')
 
         for k in range(len(self.linesArray)):
             self.linesArray[k].setText('')
         
-    def completeTab(self):
+    def completeTab(self): #method triggered by the 'Complete' Button
         for k in range(len(self.linesArray)):
             if self.linesArray[k].text() == '':
                 self.linesArray[k].setText('0')
     
-    def unitTab(self):
+    def unitTab(self): #method triggered by the 'Unitary' Button
         for k in range(0,len(self.linesArray), self.n+1):
             self.linesArray[k].setText('1') 
         
 
         #print(self.n)
 
-    def matrixCalc(self):
+    def matrixCalc(self):  #method triggered by the 'Continue' Button
             
+            #this method calls the completeTab. So if you have still empty forms those will treated as 0s
             
             self.completeTab()
-
+            
+            #init an empty nxn matrix with numpy
             
             matrix = np.zeros((self.n,self.n))
 
+            #insert the values in the grid into the matrix
+            
             for i in range(self.n):
                 for j in range(self.n):
                     matrix[i][j] = float(self.linesArray[self.n * i + j].text())
 
 
-
             rank = np.linalg.matrix_rank(matrix)
 
+            #the dialog that will print the Det of the Matrix
+            
             d1 = QDialog(self)
             
             grid3 = QGridLayout(self)
@@ -127,14 +133,15 @@ class Appl(QWidget):
 
             grid3.addWidget(QLabel('det(M) = {}'.format(np.linalg.det(matrix))), 1, 1)
 
-            grid3.addWidget(QLabel('rango(M) = {}'.format(rank)), 3,1)
+            grid3.addWidget(QLabel('rank(M) = {}'.format(rank)), 3,1)
 
-          
-            self.d.setWindowTitle('Aggiunta di M, M*')
+            #change the windowTitle of the grid to plot here the Adjugate of the matrix
+            
+            self.d.setWindowTitle('Adjugate of M, M*')
 
 
             if np.linalg.det(matrix) == 0.0:
-                grid3.addWidget(QLabel("M non e' invertibile"),2,1)
+                grid3.addWidget(QLabel("M is not invertible"),2,1)
                 for i in range(self.n):
                     for j in range(self.n):
                         self.linesArray[i*self.n + j].setText('NaN')
@@ -149,8 +156,9 @@ class Appl(QWidget):
             d1.setGeometry(100,100,300,300)
             d1.setWindowTitle('Det(M)')
             d1.show()
-            print(matrix)
-
+           
+        
+        
 if __name__ == '__main__':
     
     app = QApplication(sys.argv)
